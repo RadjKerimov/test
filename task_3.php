@@ -35,12 +35,24 @@
                             <ol class="breadcrumb page-breadcrumb">
 
                             <?php
-                                $breadcrumb = array ('Главная', 'PHP', 'Функции');
+                                $breadcrumb = array (
+                                    [
+                                        'title' => 'Главная',
+                                        'url' => '1'
+                                    ], 
+                                    [
+                                        'title' => 'PHP',
+                                        'url' => '2'
+                                    ], 
+                                    [
+                                        'title' => 'Функции',
+                                        'url' => '3'
+                                    ]);
                                 foreach ($breadcrumb as $key => $value) {
                                     if ($value == end($breadcrumb))
-                                       echo '<li class="breadcrumb-item active">' . $value . '</li>';
+                                       echo '<li class="breadcrumb-item active">' . $value['title'] . '</li>';
                                     else 
-                                       echo '<li class="breadcrumb-item"><a href="#">' . $value . '</a></li>';
+                                       echo '<li class="breadcrumb-item"><a href="'. $value['url'].'">' . $value['title'] . '</a></li>';
                                 }
                             ?>
                                
