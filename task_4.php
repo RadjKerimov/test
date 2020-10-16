@@ -69,7 +69,7 @@
                         );
                         ?>
 
-                        <?php foreach ($list as $key => $value) : ?>
+                        <?php foreach ($list as  $value) : ?>
                             <div class="d-flex mt-2"><?= $value['name'] ?><span class="d-inline-block ml-auto"><?= $value['number'] ?></span></div>
                             <div class="progress progress-sm mb-3">
                                 <div class="progress-bar <?= $value['class'] ?>" role="progressbar" style="width: <?= $value['width'] ?>;" aria-valuenow="<?php echo rtrim($value['width'], '%'); ?>" aria-valuemin="0" aria-valuemax="100"></div>
